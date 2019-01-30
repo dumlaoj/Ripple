@@ -8,4 +8,4 @@ Users can also generate a new random photo by pressing the refresh button at the
 ## Screenshots
 
 
-![](Ripple/Ripple Screenshots/Ripple-Screenshot1.png)
+![](https://github.com/dumlaoj/Ripple/blob/master/Ripple%20Screenshots/Ripple-Screenshot1.png)
