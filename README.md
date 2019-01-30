@@ -8,3 +8,4 @@ Users can also generate a new random photo by pressing the refresh button at the
 ## Screenshots
 
 
+![alt text](http://url/to/img.png)
