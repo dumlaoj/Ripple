@@ -92,11 +92,10 @@
 			children = (
 				175E353321FFD45D00D0100C /* Supporting Files */,
 				171C983C2200E01900C641C1 /* Card */,
-				175E352321FFD43800D0100C /* PhotoViewController.swift */,
-				1729B6D722000AD400F3FBFB /* PhotoView.swift */,
+				17D33586220248A300BECDA0 /* Photo */,
+				171C9841220167EF00C641C1 /* Photo Info */,
 				175E353421FFDA2500D0100C /* Photo.swift */,
 				17D3358222023D6600BECDA0 /* Unsplaher.swift */,
-				171C9841220167EF00C641C1 /* Photo Info */,
 				17D33584220240E700BECDA0 /* AccessKey.swift */,
 				175E352821FFD43900D0100C /* Assets.xcassets */,
 				175E352D21FFD43900D0100C /* Info.plist */,
@@ -113,6 +112,15 @@
 				175E352A21FFD43900D0100C /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17D33586220248A300BECDA0 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				175E352321FFD43800D0100C /* PhotoViewController.swift */,
+				1729B6D722000AD400F3FBFB /* PhotoView.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
