@@ -9,7 +9,7 @@
 import UIKit
 
 class PhotoView: UIView {
-
+	
 	let imageView: UIImageView = {
 		let iv = UIImageView(backgroundColor: .lightGray)
 		iv.contentMode = .scaleAspectFill
@@ -24,6 +24,8 @@ class PhotoView: UIView {
 		button.clipsToBounds = true
 		return button
 	}()
+	
+	var blurredView = UIVisualEffectView(backgroundColor: .clear)
 	
 	var image: UIImage? {
 		get {
@@ -53,5 +55,8 @@ class PhotoView: UIView {
 		refreshButton.constrain(withSize: .init(width: sizeConstant, height: sizeConstant))
 		refreshButton.layer.cornerRadius = sizeConstant / 2
 		
+		addSubview(blurredView)
+		blurredView.fillSuperview()
+		bringSubviewToFront(refreshButton)
 	}
 }

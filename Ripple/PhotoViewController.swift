@@ -8,23 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PhotoViewController: UIViewController {
 
+	let cardViewController = CardViewController()
+	
+	var piViewController = PhotoInfoViewController(Photo())
+	
 	var photoView: PhotoView { return view as! PhotoView }
 
 	var photo: Photo? {
 		didSet {
 			guard let photo = self.photo else { return }
 			photoString = photo.photoURL(ofSize: .small)
+			piViewController.photo = photo
 		}
 	}
 	
-	var photoString: String = "" { didSet { fetchImage(from: photoString) } }
+	var photoString: String   { didSet { fetchImage(from: photoString) } }
 	
+	init() {
+		self.photoString = String()
+		super.init(nibName: nil, bundle: nil)
+	}
+	
+	required init?(coder aDecoder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 }
 
 //	VIEW LIFECYCLE
-extension ViewController {
+extension PhotoViewController {
 	
 	override func loadView() {
 		super.loadView()
@@ -35,19 +48,22 @@ extension ViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configureButtons()
-//		Unsplasher().getRandomPhoto(forOrientation: .portrait, completion: { photo in
-//			self.photo = photo
-//		})
+		addCardView()
+		getNewRandomImage()
 	}
 }
 
-extension ViewController {
+extension PhotoViewController {
 	private func fetchImage(from urlString: String) {
 		guard let url = URL(string: urlString), let data = try? Data(contentsOf: url) else { return }
 		DispatchQueue.global().async {
 			guard let image = UIImage(data: data) else { return }
 			DispatchQueue.main.async {
-				self.photoView.image = image
+				UIView.animate(withDuration: 1, animations: {
+					self.photoView.blurredView.effect = nil
+					self.photoView.image = image
+
+				})
 			}
 		}
 	}
@@ -57,8 +73,21 @@ extension ViewController {
 	}
 	
 	@objc private func getNewRandomImage() {
+		photoView.blurredView.effect = UIBlurEffect(style: .light)
 		Unsplasher().getRandomPhoto(forOrientation: .portrait, completion: { photo in
-			self.photo = photo
+			DispatchQueue.main.async {
+				self.photo = photo
+			}
 		})
+	}
+}
+
+//	HANDLE CHILD CARD VIEW CONTROLLER
+extension PhotoViewController {
+	func addCardView() {
+		addChild(cardViewController)
+		view.addSubview(cardViewController.view)
+		cardViewController.didMove(toParent: self)
+		cardViewController.add(piViewController)
 	}
 }

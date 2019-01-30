@@ -10,12 +10,12 @@ import Foundation
 
 struct Photo: Codable {
 	let id: String
-	let width: Int
-	let height: Int
-	let color: String
 	let downloads: Int
+	let likes: Int
 	let urls: [String: String]
-
+	let user: User?
+	let location: Location?
+	
 	func photoURL(ofSize size: PhotoSize) -> String {
 		let urlString = self.urls[size.rawValue]!
 		return urlString
@@ -28,12 +28,30 @@ struct Photo: Codable {
 		case regular
 		case small
 	}
+	
+	init() {
+		self.id = ""
+		self.downloads = 0
+		self.likes = 0
+		self.urls = [:]
+		self.user = nil
+		self.location = nil
+	}
+}
+
+struct User: Codable {
+	let id: String
+	let username: String
+	let name: String
+}
+
+struct Location: Codable {
+	let city: String?
+	let country: String?
 }
 
 class Unsplasher {
 	
-	private let accessKey = "37e5157585105c69309f92586416c32a29df22cf819c4f402639c81e93bcd714"
-	private let accessKey2 = "f190ce92df46583ec08483d28e58e13a3ffae8de25efe2bded47f2fdfa05fbee"
 	private var clientID: URLQueryItem { return URLQueryItem(name: "client_id", value: accessKey2) }
 	
 	private var urlComponents: URLComponents = {
@@ -50,13 +68,19 @@ class Unsplasher {
 			let orientationQuery = URLQueryItem(name: "orientation", value: orientation.rawValue)
 			urlComponents.queryItems?.append(orientationQuery)
 		}
+		print(urlComponents.url ?? "Cannot print URL")
+		print("\n")
 		URLSession.decode(Photo.self, fromURL: urlComponents.url!, completion: { photo in
 			completion(photo)
 		})
 	}
 	
 	private func resetQueries() {
+		/* 	HOW TO QUERY A COLLECTION TYPE	*/
+//		let collectionQueryItem = URLQueryItem(name: "collection", value: "nature")
+		
 		urlComponents.queryItems = [clientID]
+		
 	}
 	
 	enum Orientation: String {

@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		window = UIWindow()
-		window?.rootViewController = ViewController()
+		let rvc = PhotoViewController()
+		window?.rootViewController = rvc
 		window?.makeKeyAndVisible()
 		return true
 	}

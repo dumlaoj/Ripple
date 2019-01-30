@@ -8,9 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */; };
+		171C98392200E00200C641C1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C98382200E00200C641C1 /* CardView.swift */; };
+		171C983B2200E01500C641C1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983A2200E01500C641C1 /* CardViewController.swift */; };
+		171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983D2201673400C641C1 /* PhotoInfoViewController.swift */; };
+		171C98402201674400C641C1 /* PhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983F2201674400C641C1 /* PhotoInfoView.swift */; };
+		171C984322019EAE00C641C1 /* AccessKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C984222019EAE00C641C1 /* AccessKey.swift */; };
 		1729B6D822000AD400F3FBFB /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B6D722000AD400F3FBFB /* PhotoView.swift */; };
 		175E352221FFD43800D0100C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E352121FFD43800D0100C /* AppDelegate.swift */; };
-		175E352421FFD43800D0100C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E352321FFD43800D0100C /* ViewController.swift */; };
+		175E352421FFD43800D0100C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E352321FFD43800D0100C /* PhotoViewController.swift */; };
 		175E352921FFD43900D0100C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175E352821FFD43900D0100C /* Assets.xcassets */; };
 		175E352C21FFD43900D0100C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175E352A21FFD43900D0100C /* LaunchScreen.storyboard */; };
 		175E353521FFDA2500D0100C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E353421FFDA2500D0100C /* Photo.swift */; };
@@ -19,10 +24,15 @@
 
 /* Begin PBXFileReference section */
 		171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession-Decoder.swift"; sourceTree = "<group>"; };
+		171C98382200E00200C641C1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		171C983A2200E01500C641C1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		171C983D2201673400C641C1 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
+		171C983F2201674400C641C1 /* PhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoView.swift; sourceTree = "<group>"; };
+		171C984222019EAE00C641C1 /* AccessKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessKey.swift; sourceTree = "<group>"; };
 		1729B6D722000AD400F3FBFB /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		175E351E21FFD43800D0100C /* Ripple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175E352121FFD43800D0100C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		175E352321FFD43800D0100C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		175E352321FFD43800D0100C /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		175E352821FFD43900D0100C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		175E352B21FFD43900D0100C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175E352D21FFD43900D0100C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +51,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171C983C2200E01900C641C1 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				171C98382200E00200C641C1 /* CardView.swift */,
+				171C983A2200E01500C641C1 /* CardViewController.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		171C9841220167EF00C641C1 /* Photo Info */ = {
+			isa = PBXGroup;
+			children = (
+				171C983D2201673400C641C1 /* PhotoInfoViewController.swift */,
+				171C983F2201674400C641C1 /* PhotoInfoView.swift */,
+			);
+			path = "Photo Info";
+			sourceTree = "<group>";
+		};
 		175E351521FFD43800D0100C = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +89,12 @@
 			isa = PBXGroup;
 			children = (
 				175E353321FFD45D00D0100C /* Supporting Files */,
-				175E352321FFD43800D0100C /* ViewController.swift */,
+				171C983C2200E01900C641C1 /* Card */,
+				175E352321FFD43800D0100C /* PhotoViewController.swift */,
 				1729B6D722000AD400F3FBFB /* PhotoView.swift */,
 				175E353421FFDA2500D0100C /* Photo.swift */,
+				171C9841220167EF00C641C1 /* Photo Info */,
+				171C984222019EAE00C641C1 /* AccessKey.swift */,
 				175E352821FFD43900D0100C /* Assets.xcassets */,
 				175E352D21FFD43900D0100C /* Info.plist */,
 			);
@@ -151,12 +182,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171C98392200E00200C641C1 /* CardView.swift in Sources */,
 				175E353521FFDA2500D0100C /* Photo.swift in Sources */,
-				175E352421FFD43800D0100C /* ViewController.swift in Sources */,
+				175E352421FFD43800D0100C /* PhotoViewController.swift in Sources */,
 				175E352221FFD43800D0100C /* AppDelegate.swift in Sources */,
+				171C983B2200E01500C641C1 /* CardViewController.swift in Sources */,
+				171C98402201674400C641C1 /* PhotoInfoView.swift in Sources */,
 				1729B6D822000AD400F3FBFB /* PhotoView.swift in Sources */,
 				175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */,
 				171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */,
+				171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */,
+				171C984322019EAE00C641C1 /* AccessKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
