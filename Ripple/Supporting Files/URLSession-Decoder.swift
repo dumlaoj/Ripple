@@ -18,12 +18,10 @@ extension URLSession {
 			print("\n")
 			do {
 				let newData = try decoder.decode(T.self, from: data)
-				
 				completion(newData)
 			} catch {
 				print(error)
 			}
-			
 		}
 		session.resume()
 	}
