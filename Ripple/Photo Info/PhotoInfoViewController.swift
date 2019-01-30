@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol PhotoInfoDelegate: class {
+	var photo: Photo { get set }
+	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo)
+}
+
 class PhotoInfoViewController: UIViewController {
 	
+	weak var parentDelegate: PhotoInfoDelegate?
 	var photoInfoView: PhotoInfoView { return view as! PhotoInfoView }
 	
 	var photo: Photo {
@@ -52,5 +58,12 @@ class PhotoInfoViewController: UIViewController {
 		photoInfoView.usernameLabel.text = "@\(username)"
 		photoInfoView.likesQuantityLabel.text = "❤️: \(likes)"
 		photoInfoView.downloadsQuantityLabel.text = "⬇️: \(downloads)"
+	}
+}
+
+extension PhotoInfoViewController: PhotoInfoDelegate {
+	
+	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo) {
+			self.photo = photo
 	}
 }
