@@ -12,7 +12,6 @@
 		171C983B2200E01500C641C1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983A2200E01500C641C1 /* CardViewController.swift */; };
 		171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983D2201673400C641C1 /* PhotoInfoViewController.swift */; };
 		171C98402201674400C641C1 /* PhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983F2201674400C641C1 /* PhotoInfoView.swift */; };
-		171C984322019EAE00C641C1 /* AccessKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C984222019EAE00C641C1 /* AccessKey.swift */; };
 		1729B6D822000AD400F3FBFB /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B6D722000AD400F3FBFB /* PhotoView.swift */; };
 		175E352221FFD43800D0100C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E352121FFD43800D0100C /* AppDelegate.swift */; };
 		175E352421FFD43800D0100C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E352321FFD43800D0100C /* PhotoViewController.swift */; };
@@ -21,6 +20,7 @@
 		175E353521FFDA2500D0100C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E353421FFDA2500D0100C /* Photo.swift */; };
 		175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E353621FFE15500D0100C /* UIView+ConstraintExtensions.swift */; };
 		17D3358322023D6600BECDA0 /* Unsplaher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3358222023D6600BECDA0 /* Unsplaher.swift */; };
+		17D33585220240E700BECDA0 /* AccessKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D33584220240E700BECDA0 /* AccessKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,6 @@
 		171C983A2200E01500C641C1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		171C983D2201673400C641C1 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 		171C983F2201674400C641C1 /* PhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoView.swift; sourceTree = "<group>"; };
-		171C984222019EAE00C641C1 /* AccessKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessKey.swift; sourceTree = "<group>"; };
 		1729B6D722000AD400F3FBFB /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		175E351E21FFD43800D0100C /* Ripple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175E352121FFD43800D0100C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		175E353421FFDA2500D0100C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		175E353621FFE15500D0100C /* UIView+ConstraintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ConstraintExtensions.swift"; sourceTree = "<group>"; };
 		17D3358222023D6600BECDA0 /* Unsplaher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplaher.swift; sourceTree = "<group>"; };
+		17D33584220240E700BECDA0 /* AccessKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 				175E353421FFDA2500D0100C /* Photo.swift */,
 				17D3358222023D6600BECDA0 /* Unsplaher.swift */,
 				171C9841220167EF00C641C1 /* Photo Info */,
-				171C984222019EAE00C641C1 /* AccessKey.swift */,
+				17D33584220240E700BECDA0 /* AccessKey.swift */,
 				175E352821FFD43900D0100C /* Assets.xcassets */,
 				175E352D21FFD43900D0100C /* Info.plist */,
 			);
@@ -186,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171C98392200E00200C641C1 /* CardView.swift in Sources */,
+				17D33585220240E700BECDA0 /* AccessKey.swift in Sources */,
 				175E353521FFDA2500D0100C /* Photo.swift in Sources */,
 				175E352421FFD43800D0100C /* PhotoViewController.swift in Sources */,
 				175E352221FFD43800D0100C /* AppDelegate.swift in Sources */,
@@ -196,7 +197,6 @@
 				175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */,
 				171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */,
 				171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */,
-				171C984322019EAE00C641C1 /* AccessKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
