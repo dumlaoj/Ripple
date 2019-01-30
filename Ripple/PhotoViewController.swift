@@ -49,7 +49,7 @@ extension PhotoViewController {
 		super.viewDidLoad()
 		configureButtons()
 		addCardView()
-		getNewRandomImage()
+//		getNewRandomImage()
 	}
 }
 
@@ -85,6 +85,13 @@ extension PhotoViewController {
 //	HANDLE CHILD CARD VIEW CONTROLLER
 extension PhotoViewController {
 	func addCardView() {
+		//	CONFIGURE SETTINGS FOR CARD VC
+		cardViewController.maxHeight = view.frame.height * (1/3)
+		cardViewController.minHeight = 40
+		cardViewController.initialAnimationDurationConstant = 1
+		cardViewController.cancelAnimationDurationConstant = 0.6
+		cardViewController.animationDurationForTapConstant = 0.6
+		//	ADD THE VC TO THIS VIEW
 		addChild(cardViewController)
 		view.addSubview(cardViewController.view)
 		cardViewController.didMove(toParent: self)
