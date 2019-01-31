@@ -11,14 +11,20 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+	var mainCoordinator: MainCoordinator?
 	var window: UIWindow?
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		window = UIWindow()
-		let rvc = PhotoViewController()
-		window?.rootViewController = rvc
+		
+		let navVC = UINavigationController()
+		mainCoordinator = MainCoordinator(navVC)
+		mainCoordinator?.start()
+		
+		window = UIWindow(frame: UIScreen.main.bounds)
+		window?.rootViewController = navVC
 		window?.makeKeyAndVisible()
+		
 		return true
 	}
 

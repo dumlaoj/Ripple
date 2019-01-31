@@ -8,14 +8,13 @@
 
 import UIKit
 
-protocol PhotoInfoDelegate: class {
-	var photo: Photo { get set }
+protocol PhotoInfoCoordinator: class {
 	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo)
 }
 
 class PhotoInfoViewController: UIViewController {
 	
-	weak var parentDelegate: PhotoInfoDelegate?
+	weak var coordinator: MainCoordinator?
 	var photoInfoView: PhotoInfoView { return view as! PhotoInfoView }
 	
 	var photo: Photo {
@@ -72,7 +71,7 @@ class PhotoInfoViewController: UIViewController {
 	}
 }
 
-extension PhotoInfoViewController: PhotoInfoDelegate {
+extension PhotoInfoViewController: PhotoInfoCoordinator {
 	
 	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo) {
 			self.photo = photo

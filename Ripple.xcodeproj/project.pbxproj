@@ -90,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				175E352021FFD43800D0100C /* Ripple */,
+				171C983C2200E01900C641C1 /* Card */,
 				175E351F21FFD43800D0100C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				175E353321FFD45D00D0100C /* Supporting Files */,
-				171C983C2200E01900C641C1 /* Card */,
 				17D33586220248A300BECDA0 /* Photo */,
 				171C9841220167EF00C641C1 /* Photo Info */,
 				175E353421FFDA2500D0100C /* Photo.swift */,

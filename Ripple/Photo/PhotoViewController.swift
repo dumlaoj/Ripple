@@ -10,7 +10,7 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 	
-	weak var photoInfoDelegate: PhotoInfoDelegate?
+	weak var coordinator: MainCoordinator?
 	let cardViewController = CardViewController()
 	var piViewController = PhotoInfoViewController(Photo())
 	var photoView: PhotoView { return view as! PhotoView }
@@ -18,7 +18,7 @@ class PhotoViewController: UIViewController {
 		didSet {
 			guard let photo = self.photo else { return }
 			photoString = photo.photoURL(ofSize: .small)
-			photoInfoDelegate?.photoViewController(self, didUpdateWithPhoto: photo)
+			coordinator?.photoViewController(self, didUpdateWithPhoto: photo)
 		}
 	}
 	
@@ -55,7 +55,6 @@ extension PhotoViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		configureButtons()
-		addCardView()
 		getNewRandomImage()
 	}
 }
@@ -73,23 +72,5 @@ extension PhotoViewController {
 				self.photo = photo
 			}
 		})
-	}
-}
-
-//	HANDLE CHILD CARD VIEW CONTROLLER
-extension PhotoViewController {
-	func addCardView() {
-		//	CONFIGURE SETTINGS FOR CARD VC
-		cardViewController.maxHeight = view.frame.height * (1/3)
-		cardViewController.minHeight = 40
-		cardViewController.initialAnimationDurationConstant = 1
-		cardViewController.cancelAnimationDurationConstant = 0.6
-		cardViewController.animationDurationForTapConstant = 0.4
-		//	ADD THE VC TO THIS VIEW
-		addChild(cardViewController)
-		view.addSubview(cardViewController.view)
-		cardViewController.didMove(toParent: self)
-		photoInfoDelegate = piViewController
-		cardViewController.add(piViewController)
 	}
 }

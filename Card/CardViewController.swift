@@ -166,7 +166,7 @@ extension CardViewController {
 	
 	//	ADDS THE MAIN VIEW CONTROLLER TO BE DISPLAYED BY CARD VIEW
 	func add(_ viewController: UIViewController) {
-		guard children.isEmpty else { fatalError("A view controller already exists!") }
+		guard children.isEmpty else { print("\(children)"); fatalError("A view controller already exists!") }
 		addChild(viewController)
 		view.addSubview(viewController.view)
 		viewController.didMove(toParent: self)
