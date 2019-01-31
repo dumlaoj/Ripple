@@ -1,16 +1,19 @@
 //
-//  MainCoordinator.swift
+//  PhotoCoordinator.swift
 //  Ripple
 //
 //  Created by Jordan Dumlao on 1/31/19.
 //  Copyright © 2019 Jordan Dumlao. All rights reserved.
 //
 
+
 import UIKit
 
-class MainCoordinator: Coordinator, PhotoInfoCoordinator {
+class PhotoCoordinator: Coordinator, PhotoInfoCoordinator {
 	
-	var childCoordinators: [Coordinator] = []
+	weak var delegate: Coordinator?
+	
+	var childCoordinators = [String: Coordinator]()
 	var navigationController: UINavigationController
 	var photoViewController: PhotoViewController
 	var photoInfoViewController: PhotoInfoViewController
@@ -29,7 +32,6 @@ class MainCoordinator: Coordinator, PhotoInfoCoordinator {
 		self.photoInfoViewController = PhotoInfoViewController(Photo())
 		self.cardViewController = CardViewController()
 	}
-	
 	
 	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo) {
 		photoInfoViewController.photo = photo

@@ -14,7 +14,7 @@ protocol PhotoInfoCoordinator: class {
 
 class PhotoInfoViewController: UIViewController {
 	
-	weak var coordinator: MainCoordinator?
+	weak var coordinator: PhotoCoordinator?
 	var photoInfoView: PhotoInfoView { return view as! PhotoInfoView }
 	
 	var photo: Photo {

@@ -10,7 +10,7 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 	
-	weak var coordinator: MainCoordinator?
+	weak var coordinator: PhotoCoordinator?
 	let cardViewController = CardViewController()
 	var piViewController = PhotoInfoViewController(Photo())
 	var photoView: PhotoView { return view as! PhotoView }

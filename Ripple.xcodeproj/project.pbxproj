@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1717035522038D7F005E823A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035422038D7F005E823A /* Coordinator.swift */; };
-		1717035822038E06005E823A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035722038E06005E823A /* MainCoordinator.swift */; };
+		1717035822038E06005E823A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035722038E06005E823A /* AppCoordinator.swift */; };
+		1717035A2203A73A005E823A /* PhotoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171703592203A73A005E823A /* PhotoCoordinator.swift */; };
 		171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */; };
 		171C98392200E00200C641C1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C98382200E00200C641C1 /* CardView.swift */; };
 		171C983B2200E01500C641C1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983A2200E01500C641C1 /* CardViewController.swift */; };
@@ -28,7 +29,8 @@
 
 /* Begin PBXFileReference section */
 		1717035422038D7F005E823A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		1717035722038E06005E823A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1717035722038E06005E823A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		171703592203A73A005E823A /* PhotoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCoordinator.swift; sourceTree = "<group>"; };
 		171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession-Decoder.swift"; sourceTree = "<group>"; };
 		171C98382200E00200C641C1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		171C983A2200E01500C641C1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				1717035422038D7F005E823A /* Coordinator.swift */,
-				1717035722038E06005E823A /* MainCoordinator.swift */,
+				1717035722038E06005E823A /* AppCoordinator.swift */,
+				171703592203A73A005E823A /* PhotoCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -223,8 +226,9 @@
 				175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */,
 				17D335882202718800BECDA0 /* UIImage-Extensions.swift in Sources */,
 				171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */,
-				1717035822038E06005E823A /* MainCoordinator.swift in Sources */,
+				1717035822038E06005E823A /* AppCoordinator.swift in Sources */,
 				171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */,
+				1717035A2203A73A005E823A /* PhotoCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
