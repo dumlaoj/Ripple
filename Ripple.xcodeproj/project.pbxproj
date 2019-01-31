@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1717035522038D7F005E823A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035422038D7F005E823A /* Coordinator.swift */; };
+		1717035822038E06005E823A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035722038E06005E823A /* MainCoordinator.swift */; };
 		171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */; };
 		171C98392200E00200C641C1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C98382200E00200C641C1 /* CardView.swift */; };
 		171C983B2200E01500C641C1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983A2200E01500C641C1 /* CardViewController.swift */; };
@@ -21,9 +23,12 @@
 		175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E353621FFE15500D0100C /* UIView+ConstraintExtensions.swift */; };
 		17D3358322023D6600BECDA0 /* Unsplaher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3358222023D6600BECDA0 /* Unsplaher.swift */; };
 		17D33585220240E700BECDA0 /* AccessKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D33584220240E700BECDA0 /* AccessKey.swift */; };
+		17D335882202718800BECDA0 /* UIImage-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D335872202718800BECDA0 /* UIImage-Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1717035422038D7F005E823A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1717035722038E06005E823A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession-Decoder.swift"; sourceTree = "<group>"; };
 		171C98382200E00200C641C1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		171C983A2200E01500C641C1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +45,7 @@
 		175E353621FFE15500D0100C /* UIView+ConstraintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ConstraintExtensions.swift"; sourceTree = "<group>"; };
 		17D3358222023D6600BECDA0 /* Unsplaher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplaher.swift; sourceTree = "<group>"; };
 		17D33584220240E700BECDA0 /* AccessKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessKey.swift; sourceTree = "<group>"; };
+		17D335872202718800BECDA0 /* UIImage-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1717035622038D87005E823A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				1717035422038D7F005E823A /* Coordinator.swift */,
+				1717035722038E06005E823A /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		171C983C2200E01900C641C1 /* Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +112,7 @@
 				175E353421FFDA2500D0100C /* Photo.swift */,
 				17D3358222023D6600BECDA0 /* Unsplaher.swift */,
 				17D33584220240E700BECDA0 /* AccessKey.swift */,
-				175E352821FFD43900D0100C /* Assets.xcassets */,
-				175E352D21FFD43900D0100C /* Info.plist */,
+				1717035622038D87005E823A /* Coordinators */,
 			);
 			path = Ripple;
 			sourceTree = "<group>";
@@ -110,6 +124,9 @@
 				175E353621FFE15500D0100C /* UIView+ConstraintExtensions.swift */,
 				175E352121FFD43800D0100C /* AppDelegate.swift */,
 				175E352A21FFD43900D0100C /* LaunchScreen.storyboard */,
+				17D335872202718800BECDA0 /* UIImage-Extensions.swift */,
+				175E352821FFD43900D0100C /* Assets.xcassets */,
+				175E352D21FFD43900D0100C /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,11 +216,14 @@
 				175E352421FFD43800D0100C /* PhotoViewController.swift in Sources */,
 				175E352221FFD43800D0100C /* AppDelegate.swift in Sources */,
 				17D3358322023D6600BECDA0 /* Unsplaher.swift in Sources */,
+				1717035522038D7F005E823A /* Coordinator.swift in Sources */,
 				171C983B2200E01500C641C1 /* CardViewController.swift in Sources */,
 				171C98402201674400C641C1 /* PhotoInfoView.swift in Sources */,
 				1729B6D822000AD400F3FBFB /* PhotoView.swift in Sources */,
 				175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */,
+				17D335882202718800BECDA0 /* UIImage-Extensions.swift in Sources */,
 				171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */,
+				1717035822038E06005E823A /* MainCoordinator.swift in Sources */,
 				171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DDY4G5VW4;
-				INFOPLIST_FILE = Ripple/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Ripple/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,7 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7DDY4G5VW4;
-				INFOPLIST_FILE = Ripple/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Ripple/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

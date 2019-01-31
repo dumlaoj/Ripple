@@ -26,6 +26,14 @@ class PhotoInfoViewController: UIViewController {
 	}
 	var user: User?
 	
+	var userProfileImageString: String {
+		didSet {
+			UIImage.fetchImage(fromURL: userProfileImageString, completion: { image in
+				self.photoInfoView.profileImageView.image = image
+			})
+		}
+	}
+	
 	override func loadView() {
 		super.loadView()
 		let photoInfoView = PhotoInfoView(frame: view.frame)
@@ -40,6 +48,7 @@ class PhotoInfoViewController: UIViewController {
 	init(_ photo: Photo) {
 		self.photo = photo
 		self.user = photo.user
+		self.userProfileImageString = String()
 		super.init(nibName: nil, bundle: nil)
 	}
 	
@@ -56,8 +65,10 @@ class PhotoInfoViewController: UIViewController {
 		
 		photoInfoView.nameLabel.text = name
 		photoInfoView.usernameLabel.text = "@\(username)"
-		photoInfoView.likesQuantityLabel.text = "❤️: \(likes)"
-		photoInfoView.downloadsQuantityLabel.text = "⬇️: \(downloads)"
+		photoInfoView.likesQuantityLabel.text = " \(likes)"
+		photoInfoView.downloadsQuantityLabel.text = " \(downloads)"
+		
+		fetchUserProfile()
 	}
 }
 
@@ -65,5 +76,16 @@ extension PhotoInfoViewController: PhotoInfoDelegate {
 	
 	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo) {
 			self.photo = photo
+	}
+}
+
+//	RETRIEVE USER PROFILE FROM USER
+extension PhotoInfoViewController {
+	func fetchUserProfile() {
+		guard let username = user?.username else { print("no username"); return }
+		Unsplasher().getUserProfile(forUsername: username, completion: { userprofile in
+//			print("Call success: \(userprofile)")
+			self.userProfileImageString = userprofile.photoURL(ofSize: .large)
+		})
 	}
 }

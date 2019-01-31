@@ -84,7 +84,6 @@ extension CardViewController {
 //		view.frame = CGRect(x: superview.frame.origin.x, y: superview.frame.maxY - heightForHandleView, width: superview.frame.width, height: superview.frame.height)
 		view.frame = CGRect(x: mainScreenBounds.origin.x, y: mainScreenBounds.maxY - heightForHandleView, width: mainScreenBounds.width, height: mainScreenBounds.height)
 		addGestures()
-		print(mainScreenBounds)
 	}
 }
 

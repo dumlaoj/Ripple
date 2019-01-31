@@ -13,9 +13,9 @@ extension URLSession {
 		let session = URLSession.shared.dataTask(with: url) { (data, response, error) in
 			guard let data = data else { return }
 			let decoder = JSONDecoder()
-			let json = String(data: data, encoding: .utf8)
-			print(json ?? "Can't print json")
-			print("\n")
+//			let json = String(data: data, encoding: .utf8)
+//			print(json ?? "Can't print json")
+//			print("\n")
 			do {
 				let newData = try decoder.decode(T.self, from: data)
 				completion(newData)

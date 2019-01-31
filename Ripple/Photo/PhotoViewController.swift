@@ -9,7 +9,7 @@
 import UIKit
 
 class PhotoViewController: UIViewController {
-
+	
 	weak var photoInfoDelegate: PhotoInfoDelegate?
 	let cardViewController = CardViewController()
 	var piViewController = PhotoInfoViewController(Photo())
@@ -22,7 +22,16 @@ class PhotoViewController: UIViewController {
 		}
 	}
 	
-	var photoString: String   { didSet { fetchImage(from: photoString) } }
+	var photoString: String   {
+		didSet {
+			UIImage.fetchImage(fromURL: photoString, completion: {image in
+				UIView.animate(withDuration: 1, animations: {
+					self.photoView.blurredView.effect = nil
+					self.photoView.image = image
+				})
+			})
+		}
+	}
 	
 	init() {
 		self.photoString = String()
@@ -52,19 +61,6 @@ extension PhotoViewController {
 }
 
 extension PhotoViewController {
-	private func fetchImage(from urlString: String) {
-		guard let url = URL(string: urlString), let data = try? Data(contentsOf: url) else { return }
-		DispatchQueue.global().async {
-			guard let image = UIImage(data: data) else { return }
-			DispatchQueue.main.async {
-				UIView.animate(withDuration: 1, animations: {
-					self.photoView.blurredView.effect = nil
-					self.photoView.image = image
-
-				})
-			}
-		}
-	}
 	
 	private func configureButtons() {
 		photoView.refreshButton.addTarget(self, action: #selector(getNewRandomImage), for: .touchUpInside)
@@ -88,7 +84,7 @@ extension PhotoViewController {
 		cardViewController.minHeight = 40
 		cardViewController.initialAnimationDurationConstant = 1
 		cardViewController.cancelAnimationDurationConstant = 0.6
-		cardViewController.animationDurationForTapConstant = 0.6
+		cardViewController.animationDurationForTapConstant = 0.4
 		//	ADD THE VC TO THIS VIEW
 		addChild(cardViewController)
 		view.addSubview(cardViewController.view)
