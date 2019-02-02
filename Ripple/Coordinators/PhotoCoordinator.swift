@@ -9,9 +9,12 @@
 
 import UIKit
 
-class PhotoCoordinator: Coordinator, PhotoInfoCoordinator {
+protocol PhotoCoordinatorDelegate: class {
+}
+
+class PhotoCoordinator: Coordinator {
 	
-	weak var delegate: Coordinator?
+	weak var delegate: PhotoCoordinatorDelegate?
 	
 	var childCoordinators = [String: Coordinator]()
 	var navigationController: UINavigationController
@@ -19,8 +22,11 @@ class PhotoCoordinator: Coordinator, PhotoInfoCoordinator {
 	var photoInfoViewController: PhotoInfoViewController
 	var cardViewController: CardViewController
 	
+	var userProfileCoordinator: UserProfileCoordinator?
+	
 	func start() {
 		photoViewController.coordinator = self
+		photoInfoViewController.coordinator = self
 		navigationController.navigationBar.isHidden = true
 		addCardView()
 		navigationController.pushViewController(photoViewController, animated: false)
@@ -31,10 +37,6 @@ class PhotoCoordinator: Coordinator, PhotoInfoCoordinator {
 		self.photoViewController = PhotoViewController()
 		self.photoInfoViewController = PhotoInfoViewController(Photo())
 		self.cardViewController = CardViewController()
-	}
-	
-	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo) {
-		photoInfoViewController.photo = photo
 	}
 	
 	private func addCardView() {
@@ -50,5 +52,33 @@ class PhotoCoordinator: Coordinator, PhotoInfoCoordinator {
 		photoViewController.view.addSubview(cardViewController.view)
 		cardViewController.didMove(toParent: photoViewController)
 		cardViewController.add(photoInfoViewController)
+	}
+}
+
+extension PhotoCoordinator: UserProfileCoordinatorDelegate {
+	func userProfileCoordinator(_ userProfileCoordinator: UserProfileCoordinator, didFinishShowingUser user: User) {
+		navigationController.navigationBar.isHidden = true
+		navigationController.popViewController(animated: true)
+		self.userProfileCoordinator = nil
+	}
+}
+
+extension PhotoCoordinator: PhotoInfoCoordinator {
+	
+	func photoInfoViewController(_ photoInfoViewController: PhotoInfoViewController, didTapUserProfileButton user: User) {
+		showUserProfile(forUser: user)
+	}
+	
+	func showUserProfile(forUser user: User) {
+		userProfileCoordinator = UserProfileCoordinator(navigationController: navigationController, user: user)
+		userProfileCoordinator?.delegate = self
+		userProfileCoordinator?.start()
+		//		childCoordinators[CoordinatorDictionary.user.rawValue] = userProfileCoordinator
+	}
+}
+
+extension PhotoCoordinator: PhotoViewControllerCoordinator {
+	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo) {
+		photoInfoViewController.photo = photo
 	}
 }

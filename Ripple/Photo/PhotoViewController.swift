@@ -8,9 +8,13 @@
 
 import UIKit
 
+protocol PhotoViewControllerCoordinator: class {
+	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo)
+}
+
 class PhotoViewController: UIViewController {
 	
-	weak var coordinator: PhotoCoordinator?
+	weak var coordinator: PhotoViewControllerCoordinator?
 	let cardViewController = CardViewController()
 	var piViewController = PhotoInfoViewController(Photo())
 	var photoView: PhotoView { return view as! PhotoView }

@@ -8,11 +8,21 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
+class AppCoordinator: Coordinator, PhotoCoordinatorDelegate {
 	
-	var childCoordinators = [String: Coordinator]()
+	var childCoordinators = [CoordinatorDictionary.RawValue: Coordinator]()
 	var photoCoordinator: PhotoCoordinator?
+	var userProfileCoordinator: UserProfileCoordinator?
 	var navigationController: UINavigationController
+	
+	enum CoordinatorDictionary: String {
+		case photo
+		case user
+	}
+	
+	init(_ navigationController: UINavigationController) {
+		self.navigationController = navigationController
+	}
 	
 	func start() {
 		showPhoto()
@@ -22,11 +32,7 @@ class AppCoordinator: Coordinator {
 		photoCoordinator = PhotoCoordinator(navigationController)
 		photoCoordinator?.delegate = self
 		photoCoordinator?.start()
-		childCoordinators["phot"] = photoCoordinator
-
+//		childCoordinators[CoordinatorDictionary.photo.rawValue] = photoCoordinator
 	}
 	
-	init(_ navigationController: UINavigationController) {
-		self.navigationController = navigationController
-	}
 }

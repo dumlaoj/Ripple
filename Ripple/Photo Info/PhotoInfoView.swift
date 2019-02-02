@@ -64,6 +64,7 @@ class PhotoInfoView: UIView {
 		let imageView = UIImageView()
 		imageView.clipsToBounds = true
 		imageView.contentMode = .scaleAspectFit
+		imageView.isUserInteractionEnabled = true
 		return imageView
 	}()
 	

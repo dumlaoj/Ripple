@@ -10,7 +10,7 @@ import Foundation
 
 class Unsplasher {
 	
-//	let accessKey = "PLACE ACCESS CODE HERE"
+	//	let accessKey = "PLACE ACCESS CODE HERE"
 	//	AFTER PLACING ACCESS KEY IN THE VAR ABOVE. CHANGE THE VAR OF VALUE BELOW TO 'accessKey'
 	private var clientID: URLQueryItem { return URLQueryItem(name: "client_id", value: accessKey) }
 	

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol PhotoInfoCoordinator: class {
-	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo)
+	func photoInfoViewController(_ photoInfoViewController: PhotoInfoViewController, didTapUserProfileButton user: User)
 }
 
 class PhotoInfoViewController: UIViewController {
@@ -28,7 +28,11 @@ class PhotoInfoViewController: UIViewController {
 	var userProfileImageString: String {
 		didSet {
 			UIImage.fetchImage(fromURL: userProfileImageString, completion: { image in
-				self.photoInfoView.profileImageView.image = image
+				if let image = image {
+					self.photoInfoView.profileImageView.image = image
+				} else {
+					self.photoInfoView.profileImageView.backgroundColor = .lightGray
+				}
 			})
 		}
 	}
@@ -41,8 +45,13 @@ class PhotoInfoViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		configureTapGesture()
 		updateUI()
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+	}
 	
 	init(_ photo: Photo) {
 		self.photo = photo
@@ -66,17 +75,24 @@ class PhotoInfoViewController: UIViewController {
 		photoInfoView.usernameLabel.text = "@\(username)"
 		photoInfoView.likesQuantityLabel.text = " \(likes)"
 		photoInfoView.downloadsQuantityLabel.text = " \(downloads)"
-		
 		fetchUserProfile()
+	}
+	
+	private func configureTapGesture() {
+		let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+		photoInfoView.profileImageView.addGestureRecognizer(tap)
+	}
+	
+	@objc private func handleTap(_ recognizer: UITapGestureRecognizer) {
+		switch recognizer.state {
+		case .ended:
+			guard let user = self.user else { fatalError("Should be a user here") }
+			coordinator?.photoInfoViewController(self, didTapUserProfileButton: user)
+		default: break
+		}
 	}
 }
 
-extension PhotoInfoViewController: PhotoInfoCoordinator {
-	
-	func photoViewController(_ photoViewController: PhotoViewController, didUpdateWithPhoto photo: Photo) {
-			self.photo = photo
-	}
-}
 
 //	RETRIEVE USER PROFILE FROM USER
 extension PhotoInfoViewController {

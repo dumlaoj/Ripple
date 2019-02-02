@@ -58,6 +58,11 @@ struct UserProfile: Codable {
 	let firstName: String
 	let lastName: String
 	let profileImage: [String: String]
+	let followersCount: Int
+	let followingCount: Int
+	let location: String?
+	let links: [String: String]
+	let bio: String?
 	
 	enum CodingKeys: String, CodingKey {
 		case id
@@ -65,6 +70,12 @@ struct UserProfile: Codable {
 		case firstName = "first_name"
 		case lastName = "last_name"
 		case profileImage = "profile_image"
+		case followersCount = "followers_count"
+		case followingCount = "following_count"
+		case location
+		case links
+		case bio
+		
 	}
 	
 	func photoURL(ofSize size: PhotoSize) -> String {

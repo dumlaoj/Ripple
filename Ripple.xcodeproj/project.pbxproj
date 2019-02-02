@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1717035522038D7F005E823A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035422038D7F005E823A /* Coordinator.swift */; };
+		1717035522038D7F005E823A /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035422038D7F005E823A /* CoordinatorProtocol.swift */; };
 		1717035822038E06005E823A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1717035722038E06005E823A /* AppCoordinator.swift */; };
 		1717035A2203A73A005E823A /* PhotoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171703592203A73A005E823A /* PhotoCoordinator.swift */; };
 		171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */; };
@@ -15,6 +15,8 @@
 		171C983B2200E01500C641C1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983A2200E01500C641C1 /* CardViewController.swift */; };
 		171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983D2201673400C641C1 /* PhotoInfoViewController.swift */; };
 		171C98402201674400C641C1 /* PhotoInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C983F2201674400C641C1 /* PhotoInfoView.swift */; };
+		171E009D2204CE6700176DB0 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171E009C2204CE6700176DB0 /* UserProfileViewController.swift */; };
+		171E009F2204CE8000176DB0 /* UserProfileview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171E009E2204CE8000176DB0 /* UserProfileview.swift */; };
 		1729B6D822000AD400F3FBFB /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729B6D722000AD400F3FBFB /* PhotoView.swift */; };
 		175E352221FFD43800D0100C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E352121FFD43800D0100C /* AppDelegate.swift */; };
 		175E352421FFD43800D0100C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E352321FFD43800D0100C /* PhotoViewController.swift */; };
@@ -22,13 +24,14 @@
 		175E352C21FFD43900D0100C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175E352A21FFD43900D0100C /* LaunchScreen.storyboard */; };
 		175E353521FFDA2500D0100C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E353421FFDA2500D0100C /* Photo.swift */; };
 		175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175E353621FFE15500D0100C /* UIView+ConstraintExtensions.swift */; };
+		17A0EE7B22040EC6001C3442 /* UserProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A0EE7A22040EC6001C3442 /* UserProfileCoordinator.swift */; };
 		17D3358322023D6600BECDA0 /* Unsplaher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D3358222023D6600BECDA0 /* Unsplaher.swift */; };
 		17D33585220240E700BECDA0 /* AccessKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D33584220240E700BECDA0 /* AccessKey.swift */; };
 		17D335882202718800BECDA0 /* UIImage-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D335872202718800BECDA0 /* UIImage-Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1717035422038D7F005E823A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1717035422038D7F005E823A /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		1717035722038E06005E823A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		171703592203A73A005E823A /* PhotoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCoordinator.swift; sourceTree = "<group>"; };
 		171C98362200B7EB00C641C1 /* URLSession-Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession-Decoder.swift"; sourceTree = "<group>"; };
@@ -36,6 +39,8 @@
 		171C983A2200E01500C641C1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		171C983D2201673400C641C1 /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoViewController.swift; sourceTree = "<group>"; };
 		171C983F2201674400C641C1 /* PhotoInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoInfoView.swift; sourceTree = "<group>"; };
+		171E009C2204CE6700176DB0 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		171E009E2204CE8000176DB0 /* UserProfileview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileview.swift; sourceTree = "<group>"; };
 		1729B6D722000AD400F3FBFB /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		175E351E21FFD43800D0100C /* Ripple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175E352121FFD43800D0100C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +50,7 @@
 		175E352D21FFD43900D0100C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		175E353421FFDA2500D0100C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		175E353621FFE15500D0100C /* UIView+ConstraintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ConstraintExtensions.swift"; sourceTree = "<group>"; };
+		17A0EE7A22040EC6001C3442 /* UserProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCoordinator.swift; sourceTree = "<group>"; };
 		17D3358222023D6600BECDA0 /* Unsplaher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplaher.swift; sourceTree = "<group>"; };
 		17D33584220240E700BECDA0 /* AccessKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessKey.swift; sourceTree = "<group>"; };
 		17D335872202718800BECDA0 /* UIImage-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extensions.swift"; sourceTree = "<group>"; };
@@ -64,9 +70,10 @@
 		1717035622038D87005E823A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				1717035422038D7F005E823A /* Coordinator.swift */,
+				1717035422038D7F005E823A /* CoordinatorProtocol.swift */,
 				1717035722038E06005E823A /* AppCoordinator.swift */,
 				171703592203A73A005E823A /* PhotoCoordinator.swift */,
+				17A0EE7A22040EC6001C3442 /* UserProfileCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -89,11 +96,19 @@
 			path = "Photo Info";
 			sourceTree = "<group>";
 		};
+		171E00A02204CE8500176DB0 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				171E009C2204CE6700176DB0 /* UserProfileViewController.swift */,
+				171E009E2204CE8000176DB0 /* UserProfileview.swift */,
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
 		175E351521FFD43800D0100C = {
 			isa = PBXGroup;
 			children = (
 				175E352021FFD43800D0100C /* Ripple */,
-				171C983C2200E01900C641C1 /* Card */,
 				175E351F21FFD43800D0100C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +124,7 @@
 		175E352021FFD43800D0100C /* Ripple */ = {
 			isa = PBXGroup;
 			children = (
+				171C983C2200E01900C641C1 /* Card */,
 				175E353321FFD45D00D0100C /* Supporting Files */,
 				17D33586220248A300BECDA0 /* Photo */,
 				171C9841220167EF00C641C1 /* Photo Info */,
@@ -116,6 +132,7 @@
 				17D3358222023D6600BECDA0 /* Unsplaher.swift */,
 				17D33584220240E700BECDA0 /* AccessKey.swift */,
 				1717035622038D87005E823A /* Coordinators */,
+				171E00A02204CE8500176DB0 /* User Profile */,
 			);
 			path = Ripple;
 			sourceTree = "<group>";
@@ -219,12 +236,15 @@
 				175E352421FFD43800D0100C /* PhotoViewController.swift in Sources */,
 				175E352221FFD43800D0100C /* AppDelegate.swift in Sources */,
 				17D3358322023D6600BECDA0 /* Unsplaher.swift in Sources */,
-				1717035522038D7F005E823A /* Coordinator.swift in Sources */,
+				1717035522038D7F005E823A /* CoordinatorProtocol.swift in Sources */,
+				171E009D2204CE6700176DB0 /* UserProfileViewController.swift in Sources */,
 				171C983B2200E01500C641C1 /* CardViewController.swift in Sources */,
 				171C98402201674400C641C1 /* PhotoInfoView.swift in Sources */,
 				1729B6D822000AD400F3FBFB /* PhotoView.swift in Sources */,
 				175E353721FFE15500D0100C /* UIView+ConstraintExtensions.swift in Sources */,
 				17D335882202718800BECDA0 /* UIImage-Extensions.swift in Sources */,
+				17A0EE7B22040EC6001C3442 /* UserProfileCoordinator.swift in Sources */,
+				171E009F2204CE8000176DB0 /* UserProfileview.swift in Sources */,
 				171C98372200B7EB00C641C1 /* URLSession-Decoder.swift in Sources */,
 				1717035822038E06005E823A /* AppCoordinator.swift in Sources */,
 				171C983E2201673400C641C1 /* PhotoInfoViewController.swift in Sources */,
