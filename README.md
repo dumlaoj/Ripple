@@ -16,10 +16,10 @@ Place access key within the var clientID as they accessKey param
 ## Attribution
 Credits go to Unsplash for use of the Unsplash Developer API
 
-## More Features Coming Soon!
+## Features
   * Choose random photo from a collection
   * View information about the user
-  * And more
+  * And more coming soon!
 
 ## Screenshots
 
